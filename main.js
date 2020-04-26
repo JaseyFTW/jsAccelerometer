@@ -90,7 +90,7 @@ accy.start();
 
 //https://wiki.dfrobot.com/How_to_Use_a_Three-Axis_Accelerometer_for_Tilt_Sensing#target_4
 accy.onreading = () => {
-  
+
   txtTest.innerText = "herro2";
   let x,y,z;
   let roll,pitch,yaw;
@@ -127,6 +127,8 @@ accy.onreading = () => {
   bdy.style.backgroundColor = "hsl(" + h +  ", " + s + ", 50%)"; //"hsl(" + h + "," + s +",30%)";
   // bdy.style.backgroundColor = "hsl(" + h +", " + s + "%, 50%)"; 
   //"hsl(" + h + "," + s +",30%)";
+
+  drawDirection(360-(roll-90));
 
 }
 

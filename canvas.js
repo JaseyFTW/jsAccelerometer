@@ -3,7 +3,23 @@ var ctx = canvas.getContext("2d");
 var radius = canvas.height / 2;
 ctx.translate(radius, radius);
 radius = radius * 0.90
-setInterval(drawClock, 1000);
+drawClock();
+
+function drawDirection(deg){
+
+  // deg = 90;
+  drawFace(ctx, radius);
+  rad = deg *(Math.PI/180);
+
+  // var now = new Date();
+  // var minute = now.getMinutes();
+  // var second = now.getSeconds();
+  // minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));
+  // alert(minute);
+  drawHand(ctx, rad, radius*0.8, radius*0.07);
+  // drawHand(ctx, 2, radius*0.1, radius*0.07);
+
+}
 
 function drawClock() {
   drawFace(ctx, radius);
@@ -19,13 +35,13 @@ function drawTime(ctx, radius){
   //hour
   hour = hour%12;
   hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
-  drawHand(ctx, hour, radius*0.5, radius*0.07);
+  //drawHand(ctx, hour, radius*0.5, radius*0.07);
   //minute
   minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));
-  drawHand(ctx, minute, radius*0.8, radius*0.07);
+  //drawHand(ctx, minute, radius*0.8, radius*0.07);
   // second
   second = (second*Math.PI/30);
-  drawHand(ctx, second, radius*0.9, radius*0.02);
+  //drawHand(ctx, second, radius*0.9, radius*0.02);
 }
 
 function drawHand(ctx, pos, length, width) {
