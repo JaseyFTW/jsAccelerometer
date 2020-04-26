@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper top-wrapper">
+    <span class="container">
+      <div>
+        <label>Copy From</label>
+      </div>
+      <div>
+        <input type="button" id="btnclipboard" value="Clipboard">
+        <input type="button" value="Document">
+        <input type="button" id="btntextbox" value="Text Box">
+        <input type="button" value="Form">
+      </div>
+    </span>
+  </div>
+  <div class="wrapper table-wrapper">
+    <table class="output-table">
+      <!-- <caption>Output</caption> -->
+      <tr>
+        <th>Day 1</th>
+        <th>Closed</th>
+        <th>FOS Day</th>
+      </tr>
+    </table>
+  </div>
+  <div class="wrapper acc">
+    <textarea class="datain" id="acc-datain"></textarea>
+  </div>
+  <div class="wrapper mag">
+    <textarea class="datain" id="mag-datain"></textarea>
+  </div>
+  <div class="wrapper other">
+    <textarea class="datain" id="other-datain"></textarea>
+  </div>
+  <div class="wrapper text">
+    <textarea class="datain" id="text-datain"></textarea>
+  </div>
+  <h3 id="test">js test</h3>
+  <template id="entry-template">
+    <tr>
+      <td class="reciept"></td>
+      <td class="closed"></td>
+      <td class="fos"></td>
+    </tr>
+  </template>
+  <script src="main.js"></script>
+</body>
+</html>
