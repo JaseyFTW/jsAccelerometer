@@ -29,6 +29,7 @@ const txtAccOutput = document.getElementById("acc-datain");
 const txtMagOutput = document.getElementById("mag-datain");
 const txtOtherOutput = document.getElementById("other-datain");
 const txtTextOutput = document.getElementById("text-datain");
+const txtMobileOutput = document.getElementById("text-mobile");
 
 const txtTest = document.getElementById("test");
 
@@ -179,3 +180,4 @@ async () => {
 
 
 txtTest.innerText = "herro2";
+txtMobileOutput.value = "Mob";
