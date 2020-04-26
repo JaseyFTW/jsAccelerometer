@@ -29,7 +29,6 @@ const txtAccOutput = document.getElementById("acc-datain");
 const txtMagOutput = document.getElementById("mag-datain");
 const txtOtherOutput = document.getElementById("other-datain");
 const txtTextOutput = document.getElementById("text-datain");
-const txtMobileOutput = document.getElementById("text-mobile");
 
 const txtTest = document.getElementById("test");
 
@@ -41,7 +40,6 @@ const leh = document.getElementsByTagName("h3")[0];
 // alert(leh.id);
 
 
-txtMobileOutput.value = "Mob";
 
 btnclipboard.addEventListener('click', async () => {
 

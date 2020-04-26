@@ -31,6 +31,12 @@ textarea{
   resize: none;
 }
 
+/* canvas{
+
+  border:1px solid #000000;
+
+} */
+
 .wrapper{
   border: 5px solid var(--color3);
   background: var(--color2);
