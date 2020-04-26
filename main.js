@@ -176,3 +176,6 @@ async () => {
   })()
 
 });
+
+
+txtTest.innerText = "herro2";
