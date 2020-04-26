@@ -112,7 +112,7 @@ accy.onreading = () => {
   let h,s;
 
   h = Math.round(roll*(360/180));
-  s = Math.round(pitch * (100/180)) + "%";
+  s = 100 - (Math.round(pitch * (100/180))) + "%";
   txtOtherOutput.value = h;
   txtOtherOutput.value += '\n' + s;
 
