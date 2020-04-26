@@ -30,6 +30,8 @@ const txtMagOutput = document.getElementById("mag-datain");
 const txtOtherOutput = document.getElementById("other-datain");
 const txtTextOutput = document.getElementById("text-datain");
 
+const txtTest = document.getElementById("test");
+
 let id = 1;
 
 // alert(poo);
@@ -86,6 +88,8 @@ maggy.one
 
 //https://wiki.dfrobot.com/How_to_Use_a_Three-Axis_Accelerometer_for_Tilt_Sensing#target_4
 accy.onreading = () => {
+  
+  txtTest.innerText = "herro2";
   let x,y,z;
   let roll,pitch,yaw;
 
@@ -172,4 +176,3 @@ async () => {
   })()
 
 });
-
