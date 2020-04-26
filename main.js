@@ -40,6 +40,9 @@ let id = 1;
 const leh = document.getElementsByTagName("h3")[0];
 // alert(leh.id);
 
+
+txtMobileOutput.value = "Mob";
+
 btnclipboard.addEventListener('click', async () => {
 
   let t = await navigator.clipboard.readText().then(text => {return text});
@@ -76,16 +79,16 @@ console.log("Starting acc: ")
 accy.start();
 //console.log(accy.x);
 
-let maggy = new Magnetometer();
-maggy.start();
+// let maggy = new Magnetometer();
+// maggy.start();
 
-maggy.onreading = () => {
-  txtMagOutput.value = "Magnetic field along the X-axis " + maggy.x;
-  txtMagOutput.value += "\nMagnetic field along the Y-axis " + maggy.y;
-  txtMagOutput.value += "\nMagnetic field along the Z-axis " + maggy.z;
-};
+// maggy.onreading = () => {
+//   txtMagOutput.value = "Magnetic field along the X-axis " + maggy.x;
+//   txtMagOutput.value += "\nMagnetic field along the Y-axis " + maggy.y;
+//   txtMagOutput.value += "\nMagnetic field along the Z-axis " + maggy.z;
+// };
 
-maggy.one
+//maggy.one
 
 //https://wiki.dfrobot.com/How_to_Use_a_Three-Axis_Accelerometer_for_Tilt_Sensing#target_4
 accy.onreading = () => {
@@ -180,4 +183,3 @@ accy.onerror = event => console.log(event.error.name, event.error.message);
 
 
 txtTest.innerText = "herro2";
-txtMobileOutput.value = "Mob";
