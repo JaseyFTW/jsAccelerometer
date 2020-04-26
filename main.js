@@ -68,7 +68,7 @@ function addTask() {
 
 }
 
-let accy = new Accelerometer();
+let accy = new LinearAccelerationSensor();
 console.log("Starting acc: ")
 accy.start();
 //console.log(accy.x);
