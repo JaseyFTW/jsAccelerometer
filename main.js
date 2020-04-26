@@ -46,7 +46,7 @@ btnclipboard.addEventListener('click', async () => {
   txtOtherOutput.value = t;
   txtOtherOutput.style.height = "";
   txtOtherOutput.style.height = txtOutput.scrollHeight + "px";
-  addTask();
+  //addTask();
 
 });
 
