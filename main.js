@@ -131,52 +131,52 @@ accy.onreading = () => {
 
 accy.onerror = event => console.log(event.error.name, event.error.message);
 
-async function CheckPermissions(){
-  // alert("click");
-  navigator.permissions.query({name:'magnetometer'}).then(function(permissionStatus) {
-    txtTextOutput.value = 'magnetometer permission status is ' + permissionStatus.state;
+// async function CheckPermissions(){
+//   // alert("click");
+//   navigator.permissions.query({name:'magnetometer'}).then(function(permissionStatus) {
+//     txtTextOutput.value = 'magnetometer permission status is ' + permissionStatus.state;
     
-    permissionStatus.onchange = function() {
-      txtTextOutput.value = 'magnetometer permission status has changed to ' + this.state;
-    };
-  });
-}
+//     permissionStatus.onchange = function() {
+//       txtTextOutput.value = 'magnetometer permission status has changed to ' + this.state;
+//     };
+//   });
+// }
 
-const getAllPermissions = async () => {
-  const allPermissions = []
-  // We use Promise.all to wait until all the permission queries are resolved
-  await Promise.all(
-    permissionsNames.map(async permissionName => {
-        try {
-          let permission
-          switch (permissionName) {
-            case 'push':
-              // Not necessary but right now Chrome only supports push messages with  notifications
-              permission = await navigator.permissions.query({name: permissionName, userVisibleOnly: true})
-              break
-            default:
-              permission = await navigator.permissions.query({name: permissionName})
-          }
-          console.log(permission)
-          allPermissions.push({permissionName, state: permission.state})
-        }
-        catch(e){
-          allPermissions.push({permissionName, state: 'error', errorMessage: e.toString()})
-        }
-    })
-  )
-  return allPermissions
-}
+// const getAllPermissions = async () => {
+//   const allPermissions = []
+//   // We use Promise.all to wait until all the permission queries are resolved
+//   await Promise.all(
+//     permissionsNames.map(async permissionName => {
+//         try {
+//           let permission
+//           switch (permissionName) {
+//             case 'push':
+//               // Not necessary but right now Chrome only supports push messages with  notifications
+//               permission = await navigator.permissions.query({name: permissionName, userVisibleOnly: true})
+//               break
+//             default:
+//               permission = await navigator.permissions.query({name: permissionName})
+//           }
+//           console.log(permission)
+//           allPermissions.push({permissionName, state: permission.state})
+//         }
+//         catch(e){
+//           allPermissions.push({permissionName, state: 'error', errorMessage: e.toString()})
+//         }
+//     })
+//   )
+//   return allPermissions
+// }
 
-btntextbox.addEventListener('click',
-async () => {
+// btntextbox.addEventListener('click',
+// async () => {
   
-  (async function () {
-    const allPermissions = await getAllPermissions()
-    console.log(allPermissions)
-  })()
+//   (async function () {
+//     const allPermissions = await getAllPermissions()
+//     console.log(allPermissions)
+//   })()
 
-});
+// });
 
 
 txtTest.innerText = "herro2";
